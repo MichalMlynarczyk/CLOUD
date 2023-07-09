@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: linear-gradient(from 50% 50% to 100% 100%,#040e23, #401d45), radial-gradient(center 100% 100%, radius 30%, rgba(69,30,71,255), transparent),radial-gradient(center 100% 0%, radius 30%, #062459, transparent), radial-gradient(center 0% 0%, radius 70%, #042353, transparent); -fx-background-radius: 10; -fx-border-radius: 10;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loginwindow.MainWindowController">
+   <children>
+      <ImageView fx:id="Logo" fitHeight="101.0" fitWidth="174.0" layoutX="51.0" layoutY="205.0" opacity="0.64" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../ZDJECIA/logo.png" />
+         </image>
+         <effect>
+            <Reflection bottomOpacity="0.14" fraction="0.83" topOpacity="1.0" />
+         </effect>
+      </ImageView>
+      <Button fx:id="signOutButton" layoutX="41.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#signOutMouseClicked" onMouseEntered="#signOutMouseEntered" onMouseExited="#signOutMouseExited" opacity="0.49" prefHeight="60.0" prefWidth="198.0" style="-fx-background-color: #0c162d; -fx-padding: 10; -fx-border-width: 2; -fx-border-color: #55627e;" text="Sign out" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <AnchorPane layoutX="267.0" layoutY="36.0" prefHeight="523.0" prefWidth="9.0" style="-fx-background-color: C7BCA1; -fx-background-radius: 7;">
+         <effect>
+            <BoxBlur height="27.0" iterations="3" width="0.0" />
+         </effect>
+      </AnchorPane>
+      <ScrollPane hbarPolicy="NEVER" layoutX="310.0" layoutY="63.0" prefHeight="332.0" prefWidth="661.0" style="-fx-background: #0c162d; -fx-border-width: 2; -fx-border-color: #55627e;">
+         <effect>
+            <DropShadow height="62.03" radius="26.12" width="44.45" />
+         </effect>
+         <content>
+            <VBox fx:id="userFileArea" prefHeight="326.0" prefWidth="659.0" style="-fx-background-color: #0c162d;">
+               <children>
+                  <HBox prefHeight="31.0" prefWidth="413.0" style="-fx-border-width: 3 0 3 0; -fx-border-color: #0c6cdc;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="25.0" prefWidth="205.0" style="-fx-background-color: linear-gradient(from 50% 50% to 100% 100%,#040e23, #401d45), radial-gradient(center 100% 100%, radius 30%, rgba(69,30,71,255), transparent),radial-gradient(center 100% 0%, radius 30%, #062459, transparent), radial-gradient(center 0% 0%, radius 70%, #042353, transparent); -fx-text-fill: #04bdbb;" text="File Name">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <effect>
+                              <Glow level="0.45" />
+                           </effect>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="25.0" prefWidth="219.0" style="-fx-border-color: black; -fx-border-width: 0 2 0 2; -fx-background-color: linear-gradient(from 50% 50% to 100% 100%,#040e23, #401d45), radial-gradient(center 100% 100%, radius 30%, rgba(69,30,71,255), transparent),radial-gradient(center 100% 0%, radius 30%, #062459, transparent), radial-gradient(center 0% 0%, radius 70%, #042353, transparent); -fx-text-fill: #04bdbb;" text="Size">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <effect>
+                              <Glow level="0.45" />
+                           </effect>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="25.0" prefWidth="235.0" style="-fx-background-color: linear-gradient(from 50% 50% to 100% 100%,#040e23, #401d45), radial-gradient(center 100% 100%, radius 30%, rgba(69,30,71,255), transparent),radial-gradient(center 100% 0%, radius 30%, #062459, transparent), radial-gradient(center 0% 0%, radius 70%, #042353, transparent); -fx-text-fill: #04bdbb;" text="Date Added">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <effect>
+                              <Glow level="0.45" />
+                           </effect>
+                        </Label>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <Label alignment="CENTER" layoutX="504.0" layoutY="9.0" prefHeight="45.0" prefWidth="274.0" text="Your files" textFill="WHITE">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="504.0" layoutY="395.0" prefHeight="54.0" prefWidth="260.0" text="Upload the file" textFill="WHITE">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="dragArea" layoutX="310.0" layoutY="446.0" onMouseExited="#dragAreaMouseExited" prefHeight="129.0" prefWidth="661.0" style="-fx-background-color: transparent; -fx-border-width: 2; -fx-border-color: #55627e;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Label fx:id="DragHere" alignment="CENTER" layoutX="209.0" layoutY="6.0" prefHeight="69.0" prefWidth="244.0" text="Drag here file" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+               <effect>
+                  <Lighting specularConstant="1.27">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant azimuth="0.0" elevation="53.27" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Label>
+            <ImageView fitHeight="54.0" fitWidth="82.0" layoutX="304.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../ZDJECIA/upload.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="0.26" />
+               </effect>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" layoutX="58.0" layoutY="306.0" prefHeight="69.0" prefWidth="82.0" text="Red">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label alignment="CENTER" layoutX="119.0" layoutY="306.0" prefHeight="69.0" prefWidth="94.0" text="Cloud">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.14218009478672988" endY="0.7203791469194313" startX="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>

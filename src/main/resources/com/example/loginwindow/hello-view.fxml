@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="backGround" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #2D3447; -fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: linear-gradient(from 50% 50% to 100% 100%,#040e23, #401d45), radial-gradient(center 100% 100%, radius 30%, rgba(69,30,71,255), transparent),radial-gradient(center 100% 0%, radius 30%, #062459, transparent), radial-gradient(center 0% 0%, radius 70%, #042353, transparent);" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loginwindow.HelloController">
+   <children>
+      <ImageView fx:id="Logo" fitHeight="101.0" fitWidth="174.0" layoutX="416.0" layoutY="27.0" opacity="0.64" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../ZDJECIA/logo.png" />
+         </image>
+         <effect>
+            <Reflection fraction="0.83" topOpacity="1.0" />
+         </effect>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="423.0" layoutY="128.0" prefHeight="69.0" prefWidth="82.0" text="Red">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label alignment="CENTER" layoutX="484.0" layoutY="128.0" prefHeight="69.0" prefWidth="94.0" text="Cloud">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.14218009478672988" endY="0.7203791469194313" startX="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="760.0" layoutY="27.0" opacity="0.61" prefHeight="31.0" prefWidth="107.0" text="Not member ?" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="signUpButton" layoutX="867.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#signUpButtonClicked" prefHeight="37.0" prefWidth="94.0" style="-fx-background-color: #141010; -fx-background-radius: 5; -fx-border-radius: 5;" text="Sign UP" textFill="#c3b7b7">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="incorrectData" alignment="CENTER" layoutX="377.0" layoutY="191.0" opacity="0.44" prefHeight="43.0" prefWidth="262.0" style="-fx-background-color: #ff0000; -fx-border-width: 3; -fx-border-color: #660000; -fx-border-radius: 5; -fx-background-radius: 8;" text="Incorrect username or password." textFill="WHITE" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <effect>
+            <Bloom threshold="0.15" />
+         </effect>
+      </Label>
+      <AnchorPane layoutX="304.0" layoutY="234.0" prefHeight="310.0" prefWidth="393.0" style="-fx-background-color: #0c162d; -fx-border-radius: 5; -fx-border-width: 1; -fx-border-color: #55627e;">
+         <children>
+            <TextField fx:id="usernameLabel" alignment="CENTER" layoutX="40.0" layoutY="51.0" prefHeight="37.0" prefWidth="313.0" promptText="Username" style="-fx-border-width: 2; -fx-border-color: #0c6cdc; -fx-background-color: linear-gradient(from 50% 50% to 100% 100%,#040e23, #401d45), radial-gradient(center 100% 100%, radius 30%, rgba(69,30,71,255), transparent),radial-gradient(center 100% 0%, radius 30%, #062459, transparent), radial-gradient(center 0% 0%, radius 70%, #042353, transparent); -fx-prompt-text-fill: #69d7d4; -fx-border-radius: 5; -fx-background-radius: 5; -fx-text-fill: #04bdbb;">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <PasswordField fx:id="passwordLabel" alignment="CENTER" layoutX="41.0" layoutY="112.0" prefHeight="37.0" prefWidth="313.0" promptText="Password" style="-fx-border-width: 2; -fx-border-color: #0c6cdc; -fx-background-color: linear-gradient(from 50% 50% to 100% 100%,#040e23, #401d45), radial-gradient(center 100% 100%, radius 30%, rgba(69,30,71,255), transparent),radial-gradient(center 100% 0%, radius 30%, #062459, transparent), radial-gradient(center 0% 0%, radius 70%, #042353, transparent); -fx-prompt-text-fill: #69d7d4; -fx-border-radius: 5; -fx-background-radius: 5; -fx-text-fill: #04bdbb;">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </PasswordField>
+            <Button fx:id="loginButton" layoutX="41.0" layoutY="176.0" mnemonicParsing="false" onMouseClicked="#loginButtonClicked" prefHeight="43.0" prefWidth="313.0" style="-fx-background-color: #00a656; -fx-border-radius: 5; -fx-background-radius: 5;" text="Sign in" textFill="#fff6f6">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <effect>
+                  <Glow level="0.0" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="forgotPasswordButton" layoutX="114.0" layoutY="245.0" mnemonicParsing="false" onMouseEntered="#fButtonStyleMouseEntered" onMouseExited="#fButtonStyleMouseExited" prefHeight="25.0" prefWidth="168.0" text="Forgot password?" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+   <effect>
+      <DropShadow height="126.52" radius="47.3725" spread="0.28" width="64.97" />
+   </effect>
+</AnchorPane>
